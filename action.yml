@@ -5,8 +5,11 @@ branding:
   icon: arrow-right-circle
   color: gray-dark
 inputs:
-  commit:
-    description: "Specify Git commit (e.g. SHA, tag, branch name)"
+  start:
+    description: "Start Git commit object (e.g. SHA, tag, branch name) in revision range"
+    required: true
+  end:
+    description: "End Git commit object (e.g. SHA, tag, branch name) in revision range"
     required: true
 outputs:
   log:
@@ -15,4 +18,5 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.commit }}
+    - ${{ inputs.start }}
+    - ${{ inputs.end }}

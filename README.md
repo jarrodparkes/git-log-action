@@ -19,5 +19,6 @@ The output of the log command.
 ```yml
 uses: jarrodparkes/git-log-action@1.0.0
 with:
-  commit: 0ab80e2c4
+  start: develop
+  end: 0ab80e2c4
 ```
