@@ -7,7 +7,7 @@ branding:
 inputs:
   commit:
     description: "Specify Git commit (e.g. SHA, tag, branch name)"
-    required: false
+    required: true
 outputs:
   log:
     description: "Output of Git Log"
