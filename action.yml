@@ -1,19 +1,19 @@
 name: "Git Log Action"
-description: "Saves Git Log Data in GitHub Workflow"
+description: "Injects git log output into GitHub workflow environment"
 author: "jarrodparkes"
 branding:
   icon: arrow-right-circle
   color: gray-dark
 inputs:
   start:
-    description: "Start Git commit object (e.g. SHA, tag, branch name) in revision range"
+    description: "Start git commit object (e.g. SHA, tag, branch name) in revision range (start..end)"
     required: true
   end:
-    description: "End Git commit object (e.g. SHA, tag, branch name) in revision range"
+    description: "End git commit object (e.g. SHA, tag, branch name) in revision range (start..end)"
     required: true
 outputs:
   log:
-    description: "Output of Git Log"
+    description: "Git log output as environment variable LOG"
 runs:
   using: "docker"
   image: "Dockerfile"

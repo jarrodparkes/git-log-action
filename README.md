@@ -1,28 +1,30 @@
 # Git Log Action
 
-Saves Git Log Data in GitHub Workflow.
+Injects git log output into GitHub workflow environment.
 
 ## Inputs
 
 ### `start`
 
-The first argument used in `git log` revision range.
+**Required** Start git commit object (e.g. SHA, tag, branch name) in revision range (start..end).
 
 ### `end`
 
-The last argument used in `git log` revision range.
+**Required** End git commit object (e.g. SHA, tag, branch name) in revision range (start..end).
 
 ## Outputs
 
 ### `log`
 
-The output of the log command.
+Git log output as environment variable LOG.
 
 ## Example
 
 ```yml
+name: Inject git log into environment
+id: git-log
 uses: jarrodparkes/git-log-action@1.0.0
 with:
-  start: develop
-  end: 0ab80e2c4
+  start: ${{ github.event.pull_request.base.sha }}
+  end: ${{ github.event.pull_request.head.sha }}
 ```
