@@ -6,7 +6,7 @@ Saves Git Log Data in GitHub Workflow.
 
 ### `commit`
 
-The last argument used in `git log` revision range. For example, if `commit=0ab80e2c4`, then the log command would resolve to `git log master..0ab80e2c4 --pretty=format:'%h - %s (%an)'`.
+The last argument used in `git log` revision range. For example, if `commit=0ab80e2c4`, then the log command would resolve to `git log develop..0ab80e2c4 --pretty=format:'%h - %s (%an)'`.
 
 ## Outputs
 
