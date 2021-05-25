@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/sh -l
 
-if [[ $1 != '' ]]; then
-    echo "commit: $1"      
-    log=$(git log master..$1 --pretty=format:'%h - %s (%an)')
-else 
+if [ -z "$1" ]; then
     echo "commit: [not-specified]" 
-    log=$(git log --pretty=format:'%h - %s (%an)')  
+    log=$(git log -n 10 --pretty=format:'%h - %s (%an)')  
+else 
+    echo "commit: $1"      
+    log=$(git log -n 10 master..$1 --pretty=format:'%h - %s (%an)')
 fi
 
 echo $log
