@@ -17,7 +17,7 @@ The output of the log command.
 ## Example
 
 ```yml
-uses: actions/git-log-action
-  with:
-    commit: 0ab80e2c4
+uses: jarrodparkes/git-log-action@1
+with:
+  commit: 0ab80e2c4
 ```
