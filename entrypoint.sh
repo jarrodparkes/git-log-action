@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/sh
 
 echo "commit: $1"      
 
