@@ -1,4 +1,4 @@
-FROM debian:9.8-slim
+FROM debian:11.6-slim
 
 LABEL "version"="1.0.0"
 LABEL "repository"="https://github.com/jarrodparkes/git-log-action"
